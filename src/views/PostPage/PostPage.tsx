@@ -34,13 +34,11 @@ export function PostPage() {
     queryKey: ["users", { userId: post?.userId }],
   });
 
-  const { data: comments, isLoading: loadingComments } = useQuery({
+  const { data: comments } = useQuery({
     queryFn: () => fetchComments(post?.id),
     enabled: post?.id != null,
     queryKey: ["comments", { postId: post?.id }],
   });
-
-  if (post == null || user == null) return null;
 
   if (loadingPost) return <Loading />;
 
@@ -51,6 +49,8 @@ export function PostPage() {
       </div>
     );
   }
+
+  if (post == null || user == null) return null;
 
   return (
     <div className="w-full sm:w-[80%] lg:w-[60%] mx-auto pt-14">

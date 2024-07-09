@@ -21,3 +21,8 @@ export interface TComment {
     fullname: string;
   };
 }
+
+export interface TReaction {
+  reaction: "like" | "dislike";
+  commentId: string | number;
+}
