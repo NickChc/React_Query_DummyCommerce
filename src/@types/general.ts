@@ -10,3 +10,14 @@ export interface TUser {
   username: string;
   image: string;
 }
+
+export interface TComment {
+  body: string;
+  id: number | string;
+  likes: number;
+  user: {
+    id: string | number;
+    username: string;
+    fullname: string;
+  };
+}
