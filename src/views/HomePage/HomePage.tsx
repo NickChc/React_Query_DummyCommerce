@@ -1,7 +1,9 @@
+import { Posts } from "@src/views/HomePage/Posts";
+
 export function HomePage() {
   return (
     <>
-      <h1>Hello</h1>
+      <Posts />
     </>
   );
 }

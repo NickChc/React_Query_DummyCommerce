@@ -1,1 +1,1 @@
-export { postsQuery } from "./posts";
+export { fetchPosts, fetchSinglePost } from "./posts";
